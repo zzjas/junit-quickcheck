@@ -1,0 +1,11 @@
+nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1057510
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/zijie4/cs527/junit-quickcheck/generators/.nondex
+nondexJarDir=/home/zijie4/cs527/junit-quickcheck/generators/.nondex
+nondexExecid=ZL5QsU2OenMk2sZ2fR3KO7Z+sdvLZhKm+BVjU3LqC8=
+nondexLogging=CONFIG
+test=

@@ -83,7 +83,6 @@ public abstract class CorePropertyParameterTest {
             new PropertyParameterContext(typeContext())
                 .annotate(annotatedElement());
         parameter.addQuantifier(quantifier);
-
         PropertyParameterGenerationContext generator =
             new PropertyParameterGenerationContext(
                 parameter,
@@ -91,8 +90,11 @@ public abstract class CorePropertyParameterTest {
                 distro,
                 randomForParameterGenerator,
                 new TupleParameterSampler(trials));
-        for (int i = 0; i < trials; ++i)
+        for (int i = 0; i < trials; ++i){
+            System.out.println("Trials");
             propertyParameters.add(generator.generate());
+        }
+            
     }
 
     protected Iterable<Generator<?>> generatorSource() {
@@ -128,6 +130,7 @@ public abstract class CorePropertyParameterTest {
         try {
             return ParameterTypeContext.forField(typeBearerField());
         } catch (Exception e) {
+            System.out.println("In exception");
             return ParameterTypeContext.forParameter(typeBearerParameter());
         }
     }
@@ -141,6 +144,9 @@ public abstract class CorePropertyParameterTest {
     }
 
     private Field typeBearerField() throws Exception {
+        System.out.println(getClass().getField("TYPE_BEARER").getName());
+        System.out.println(getClass().getField("TYPE_BEARER").getType());
+        System.out.println(getClass().getField("TYPE_BEARER").getGenericType());
         return getClass().getField("TYPE_BEARER");
     }
 

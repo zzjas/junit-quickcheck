@@ -80,13 +80,13 @@ public class PropertyParameterGenerationContext
 
     public Object generate() {
         Object nextValue;
-
+        System.out.println("In generate");
         for (nextValue = generator.generate(random(), this);
             !evaluate(nextValue);) {
 
             nextValue = generator.generate(random(), this);
         }
-
+System.out.println("after generate");
         return nextValue;
     }
 
@@ -97,6 +97,7 @@ public class PropertyParameterGenerationContext
     }
 
     private boolean evaluate(Object value) {
+        System.out.println("Evalue");
         evaluator.bind(value);
         boolean result = evaluator.evaluate();
 
@@ -112,7 +113,7 @@ public class PropertyParameterGenerationContext
                 discards,
                 successfulEvaluations);
         }
-
+         System.out.println("after Evalue"); 
         return result;
     }
 

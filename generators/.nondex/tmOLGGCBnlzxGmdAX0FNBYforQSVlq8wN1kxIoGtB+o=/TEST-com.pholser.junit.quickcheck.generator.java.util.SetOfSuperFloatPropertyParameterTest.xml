@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest" time="2.609" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="nondexStart" value="0"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/zijie4/cs527/junit-quickcheck/generators/target/test-classes:/home/zijie4/cs527/junit-quickcheck/generators/target/classes:/home/zijie4/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/zijie4/.m2/repository/com/pholser/junit-quickcheck-core/1.1-SNAPSHOT/junit-quickcheck-core-1.1-SNAPSHOT.jar:/home/zijie4/.m2/repository/org/javaruntype/javaruntype/1.3/javaruntype-1.3.jar:/home/zijie4/.m2/repository/org/antlr/antlr-runtime/3.1.2/antlr-runtime-3.1.2.jar:/home/zijie4/.m2/repository/ognl/ognl/3.3.4/ognl-3.3.4.jar:/home/zijie4/.m2/repository/org/javassist/javassist/3.29.0-GA/javassist-3.29.0-GA.jar:/home/zijie4/.m2/repository/ru/vyarus/generics-resolver/3.0.3/generics-resolver-3.0.3.jar:/home/zijie4/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/zijie4/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/zijie4/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/zijie4/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/zijie4/.m2/repository/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar:/home/zijie4/.m2/repository/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar:/home/zijie4/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar:/home/zijie4/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/zijie4/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/zijie4/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/zijie4/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/zijie4/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/zijie4/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/home/zijie4/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/home/zijie4/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/zijie4/.m2/repository/com/google/guava/guava-testlib/31.1-jre/guava-testlib-31.1-jre.jar:/home/zijie4/.m2/repository/ch/qos/logback/logback-classic/1.3.5/logback-classic-1.3.5.jar:/home/zijie4/.m2/repository/ch/qos/logback/logback-core/1.3.5/logback-core-1.3.5.jar:/home/zijie4/.m2/repository/com/pholser/junit-quickcheck-core/1.1-SNAPSHOT/junit-quickcheck-core-1.1-SNAPSHOT-tests.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="nondexPrintstack" value="false"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="nondexRuns" value="10"/>
+    <property name="user.timezone" value=""/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/zijie4/cs527/junit-quickcheck/generators/target/surefire/surefirebooter-20230829000612813_27.jar /home/zijie4/cs527/junit-quickcheck/generators/target/surefire 2023-08-29T00-06-12_694-jvmRun1 surefire-20230829000612813_25tmp surefire_6-20230829000612813_26tmp"/>
+    <property name="nondexLogging" value="CONFIG"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/zijie4/cs527/junit-quickcheck/generators/target/test-classes:/home/zijie4/cs527/junit-quickcheck/generators/target/classes:/home/zijie4/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/zijie4/.m2/repository/com/pholser/junit-quickcheck-core/1.1-SNAPSHOT/junit-quickcheck-core-1.1-SNAPSHOT.jar:/home/zijie4/.m2/repository/org/javaruntype/javaruntype/1.3/javaruntype-1.3.jar:/home/zijie4/.m2/repository/org/antlr/antlr-runtime/3.1.2/antlr-runtime-3.1.2.jar:/home/zijie4/.m2/repository/ognl/ognl/3.3.4/ognl-3.3.4.jar:/home/zijie4/.m2/repository/org/javassist/javassist/3.29.0-GA/javassist-3.29.0-GA.jar:/home/zijie4/.m2/repository/ru/vyarus/generics-resolver/3.0.3/generics-resolver-3.0.3.jar:/home/zijie4/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/zijie4/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/zijie4/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/zijie4/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/zijie4/.m2/repository/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar:/home/zijie4/.m2/repository/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar:/home/zijie4/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar:/home/zijie4/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/zijie4/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/zijie4/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/zijie4/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/zijie4/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/zijie4/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/home/zijie4/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/home/zijie4/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/zijie4/.m2/repository/com/google/guava/guava-testlib/31.1-jre/guava-testlib-31.1-jre.jar:/home/zijie4/.m2/repository/ch/qos/logback/logback-classic/1.3.5/logback-classic-1.3.5.jar:/home/zijie4/.m2/repository/ch/qos/logback/logback-core/1.3.5/logback-core-1.3.5.jar:/home/zijie4/.m2/repository/com/pholser/junit-quickcheck-core/1.1-SNAPSHOT/junit-quickcheck-core-1.1-SNAPSHOT-tests.jar:"/>
+    <property name="test" value="com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest#verifyInteractionWithRandomness"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="nondexExecid" value="tmOLGGCBnlzxGmdAX0FNBYforQSVlq8wN1kxIoGtB+o="/>
+    <property name="user.home" value="/home/zijie4"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/zijie4/cs527/junit-quickcheck/generators"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="nondexEnd" value="9223372036854775807"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="nondexFilter" value=".*"/>
+    <property name="nondexSeed" value="1098954"/>
+    <property name="surefire.real.class.path" value="/home/zijie4/cs527/junit-quickcheck/generators/target/surefire/surefirebooter-20230829000612813_27.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.20+8-post-Ubuntu-1ubuntu120.04"/>
+    <property name="user.name" value="zijie4"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.4.0-156-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/zijie4/.m2/repository"/>
+    <property name="nondexDir" value="/home/zijie4/cs527/junit-quickcheck/generators/.nondex"/>
+    <property name="nondexJarDir" value="/home/zijie4/cs527/junit-quickcheck/generators/.nondex"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.20"/>
+    <property name="user.dir" value="/home/zijie4/cs527/junit-quickcheck/generators"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="nondexMode" value="FULL"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.20+8-post-Ubuntu-1ubuntu120.04"/>
+    <property name="java.specification.maintenance.version" value="2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="verifyInteractionWithRandomness" classname="com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest" time="2.607">
+    <failure message="&#10;Wanted but not invoked:&#10;randomForParameterGenerator.nextFloat(&#10;    0.0f,&#10;    1.0f&#10;);&#10;-&gt; at com.pholser.junit.quickcheck.Generating.verifyFloats(Generating.java:103)&#10;&#10;However, there were exactly 3 interactions with this mock:&#10;randomForParameterGenerator.nextBoolean();&#10;-&gt; at com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator.generate(BooleanGenerator.java:52)&#10;&#10;randomForParameterGenerator.nextBoolean();&#10;-&gt; at com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator.generate(BooleanGenerator.java:52)&#10;&#10;randomForParameterGenerator.nextBoolean();&#10;-&gt; at com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator.generate(BooleanGenerator.java:52)&#10;&#10;" type="Wanted but not invoked"><![CDATA[Wanted but not invoked:
+randomForParameterGenerator.nextFloat(
+    0.0f,
+    1.0f
+);
+-> at com.pholser.junit.quickcheck.Generating.verifyFloats(Generating.java:103)
+
+However, there were exactly 3 interactions with this mock:
+randomForParameterGenerator.nextBoolean();
+-> at com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator.generate(BooleanGenerator.java:52)
+
+randomForParameterGenerator.nextBoolean();
+-> at com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator.generate(BooleanGenerator.java:52)
+
+randomForParameterGenerator.nextBoolean();
+-> at com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator.generate(BooleanGenerator.java:52)
+
+
+	at com.pholser.junit.quickcheck.Generating.verifyFloats(Generating.java:103)
+	at com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest.verifyInteractionWithRandomness(SetOfSuperFloatPropertyParameterTest.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:49)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:120)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:95)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:69)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[in floats
+TYPE_BEARER
+interface java.util.Set
+java.util.Set<? super java.lang.Float>
+In forfirld
+TYPE_BEARER
+sun.reflect.annotation.AnnotatedTypeFactory$AnnotatedParameterizedTypeImpl@7adff6cb
+com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest
+Set<? super Float>
+java.util.Set<? super java.lang.Float>
+TYPE_BEARER
+interface java.util.Set
+java.util.Set<? super java.lang.Float>
+generatorFor
+com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest
+interface java.util.Set
+In compose
+maybeaddgeneratorsFor
+interface java.util.Set
+generatorsFor
+interface java.util.Set
+Matches generators
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@35555145
+com.pholser.junit.quickcheck.generator.java.util.LinkedHashSetGenerator@229749f0
+com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@25e353dc
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@25e353dc
+In match generators
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@25e353dc
+In compose weigghetd fn
+class java.lang.Object
+class java.lang.Object
+generatorFor
+java.util.Set<? super java.lang.Float>
+class java.lang.Object
+In compose
+maybeaddgeneratorsFor
+class java.lang.Object
+generatorsFor
+class java.lang.Object
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@322ab6ce
+com.pholser.junit.quickcheck.generator.java.lang.ByteGenerator@5b74902c
+com.pholser.junit.quickcheck.generator.java.lang.CharacterGenerator@4e4bfd9c
+com.pholser.junit.quickcheck.generator.java.lang.DoubleGenerator@43ee1cf7
+com.pholser.junit.quickcheck.generator.java.lang.Encoded@24954e82
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+com.pholser.junit.quickcheck.generator.java.lang.IntegerGenerator@4a29fe2e
+com.pholser.junit.quickcheck.generator.java.lang.LongGenerator@79135a38
+com.pholser.junit.quickcheck.generator.java.lang.ShortGenerator@77fceac6
+com.pholser.junit.quickcheck.generator.java.lang.StringGenerator@563c3aca
+com.pholser.junit.quickcheck.generator.java.math.BigDecimalGenerator@53e166ad
+com.pholser.junit.quickcheck.generator.java.math.BigIntegerGenerator@30c03473
+com.pholser.junit.quickcheck.generator.java.nio.charset.CharsetGenerator@20fa5277
+com.pholser.junit.quickcheck.generator.java.time.ClockGenerator@4f2b1e9f
+com.pholser.junit.quickcheck.generator.java.time.DurationGenerator@7ef9c8a5
+com.pholser.junit.quickcheck.generator.java.time.InstantGenerator@c6244e7
+com.pholser.junit.quickcheck.generator.java.time.LocalDateGenerator@25dad235
+com.pholser.junit.quickcheck.generator.java.time.LocalDateTimeGenerator@3292eff7
+com.pholser.junit.quickcheck.generator.java.time.LocalTimeGenerator@29ea5e0
+com.pholser.junit.quickcheck.generator.java.time.MonthDayGenerator@1c459c28
+com.pholser.junit.quickcheck.generator.java.time.OffsetDateTimeGenerator@6ffdbeef
+com.pholser.junit.quickcheck.generator.java.time.OffsetTimeGenerator@4a3509b0
+com.pholser.junit.quickcheck.generator.java.time.PeriodGenerator@3d7314b3
+com.pholser.junit.quickcheck.generator.java.time.YearGenerator@d677be9
+com.pholser.junit.quickcheck.generator.java.time.YearMonthGenerator@fefb66c
+com.pholser.junit.quickcheck.generator.java.time.ZoneIdGenerator@6d7556a8
+com.pholser.junit.quickcheck.generator.java.time.ZoneOffsetGenerator@48860139
+com.pholser.junit.quickcheck.generator.java.time.ZonedDateTimeGenerator@7e0883f3
+com.pholser.junit.quickcheck.generator.java.util.BitSetGenerator@4ba1c1a2
+com.pholser.junit.quickcheck.generator.java.util.DateGenerator@33568e26
+com.pholser.junit.quickcheck.generator.java.util.LocaleGenerator@2c2e5e72
+com.pholser.junit.quickcheck.generator.java.util.OptionalDoubleGenerator@26888c31
+com.pholser.junit.quickcheck.generator.java.util.OptionalIntGenerator@e60c5a
+com.pholser.junit.quickcheck.generator.java.util.OptionalLongGenerator@4e030feb
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version3@194e78af
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version4@4fe4503a
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version5@669580e2
+com.pholser.junit.quickcheck.generator.java.util.TimeZoneGenerator@37c37d67
+com.pholser.junit.quickcheck.internal.generator.ZilchGenerator@b671dda
+com.pholser.junit.quickcheck.test.generator.AFoo@5ba63110
+java.util.Set<? super java.lang.Float>
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@7d82ca56
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@7d82ca56
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@7d82ca56
+In compose weigghetd fn
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@7d82ca56
+maybeaddgeneratorsFor
+class java.lang.Object
+generatorsFor
+class java.lang.Object
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@322ab6ce
+com.pholser.junit.quickcheck.generator.java.lang.ByteGenerator@5b74902c
+com.pholser.junit.quickcheck.generator.java.lang.CharacterGenerator@4e4bfd9c
+com.pholser.junit.quickcheck.generator.java.lang.DoubleGenerator@43ee1cf7
+com.pholser.junit.quickcheck.generator.java.lang.Encoded@24954e82
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+com.pholser.junit.quickcheck.generator.java.lang.IntegerGenerator@4a29fe2e
+com.pholser.junit.quickcheck.generator.java.lang.LongGenerator@79135a38
+com.pholser.junit.quickcheck.generator.java.lang.ShortGenerator@77fceac6
+com.pholser.junit.quickcheck.generator.java.lang.StringGenerator@563c3aca
+com.pholser.junit.quickcheck.generator.java.math.BigDecimalGenerator@53e166ad
+com.pholser.junit.quickcheck.generator.java.math.BigIntegerGenerator@30c03473
+com.pholser.junit.quickcheck.generator.java.nio.charset.CharsetGenerator@20fa5277
+com.pholser.junit.quickcheck.generator.java.time.ClockGenerator@4f2b1e9f
+com.pholser.junit.quickcheck.generator.java.time.DurationGenerator@7ef9c8a5
+com.pholser.junit.quickcheck.generator.java.time.InstantGenerator@c6244e7
+com.pholser.junit.quickcheck.generator.java.time.LocalDateGenerator@25dad235
+com.pholser.junit.quickcheck.generator.java.time.LocalDateTimeGenerator@3292eff7
+com.pholser.junit.quickcheck.generator.java.time.LocalTimeGenerator@29ea5e0
+com.pholser.junit.quickcheck.generator.java.time.MonthDayGenerator@1c459c28
+com.pholser.junit.quickcheck.generator.java.time.OffsetDateTimeGenerator@6ffdbeef
+com.pholser.junit.quickcheck.generator.java.time.OffsetTimeGenerator@4a3509b0
+com.pholser.junit.quickcheck.generator.java.time.PeriodGenerator@3d7314b3
+com.pholser.junit.quickcheck.generator.java.time.YearGenerator@d677be9
+com.pholser.junit.quickcheck.generator.java.time.YearMonthGenerator@fefb66c
+com.pholser.junit.quickcheck.generator.java.time.ZoneIdGenerator@6d7556a8
+com.pholser.junit.quickcheck.generator.java.time.ZoneOffsetGenerator@48860139
+com.pholser.junit.quickcheck.generator.java.time.ZonedDateTimeGenerator@7e0883f3
+com.pholser.junit.quickcheck.generator.java.util.BitSetGenerator@4ba1c1a2
+com.pholser.junit.quickcheck.generator.java.util.DateGenerator@33568e26
+com.pholser.junit.quickcheck.generator.java.util.LocaleGenerator@2c2e5e72
+com.pholser.junit.quickcheck.generator.java.util.OptionalDoubleGenerator@26888c31
+com.pholser.junit.quickcheck.generator.java.util.OptionalIntGenerator@e60c5a
+com.pholser.junit.quickcheck.generator.java.util.OptionalLongGenerator@4e030feb
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version3@194e78af
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version4@4fe4503a
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version5@669580e2
+com.pholser.junit.quickcheck.generator.java.util.TimeZoneGenerator@37c37d67
+com.pholser.junit.quickcheck.internal.generator.ZilchGenerator@b671dda
+com.pholser.junit.quickcheck.test.generator.AFoo@5ba63110
+java.util.Set<? super java.lang.Float>
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@2aaa89c2
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@2aaa89c2
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@2aaa89c2
+In compose weigghetd fn
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@25e353dc
+maybeaddgeneratorsFor
+interface java.util.Set
+generatorsFor
+interface java.util.Set
+Matches generators
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@35555145
+com.pholser.junit.quickcheck.generator.java.util.LinkedHashSetGenerator@229749f0
+com.pholser.junit.quickcheck.generator.java.util.SetOfSuperFloatPropertyParameterTest
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@5a58db42
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@5a58db42
+In match generators
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@5a58db42
+In compose weigghetd fn
+interface java.lang.Comparable
+interface java.lang.Comparable
+generatorFor
+java.util.Set<? super java.lang.Float>
+interface java.lang.Comparable
+In compose
+maybeaddgeneratorsFor
+interface java.lang.Comparable
+generatorsFor
+interface java.lang.Comparable
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@322ab6ce
+com.pholser.junit.quickcheck.generator.java.lang.ByteGenerator@5b74902c
+com.pholser.junit.quickcheck.generator.java.lang.CharacterGenerator@4e4bfd9c
+com.pholser.junit.quickcheck.generator.java.lang.DoubleGenerator@43ee1cf7
+com.pholser.junit.quickcheck.generator.java.lang.Encoded@24954e82
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+com.pholser.junit.quickcheck.generator.java.lang.IntegerGenerator@4a29fe2e
+com.pholser.junit.quickcheck.generator.java.lang.LongGenerator@79135a38
+com.pholser.junit.quickcheck.generator.java.lang.ShortGenerator@77fceac6
+com.pholser.junit.quickcheck.generator.java.lang.StringGenerator@563c3aca
+com.pholser.junit.quickcheck.generator.java.math.BigDecimalGenerator@53e166ad
+com.pholser.junit.quickcheck.generator.java.math.BigIntegerGenerator@30c03473
+com.pholser.junit.quickcheck.generator.java.nio.charset.CharsetGenerator@20fa5277
+com.pholser.junit.quickcheck.generator.java.time.DurationGenerator@7ef9c8a5
+com.pholser.junit.quickcheck.generator.java.time.InstantGenerator@c6244e7
+com.pholser.junit.quickcheck.generator.java.time.LocalDateGenerator@25dad235
+com.pholser.junit.quickcheck.generator.java.time.LocalDateTimeGenerator@3292eff7
+com.pholser.junit.quickcheck.generator.java.time.LocalTimeGenerator@29ea5e0
+com.pholser.junit.quickcheck.generator.java.time.MonthDayGenerator@1c459c28
+com.pholser.junit.quickcheck.generator.java.time.OffsetDateTimeGenerator@6ffdbeef
+com.pholser.junit.quickcheck.generator.java.time.OffsetTimeGenerator@4a3509b0
+com.pholser.junit.quickcheck.generator.java.time.YearGenerator@d677be9
+com.pholser.junit.quickcheck.generator.java.time.YearMonthGenerator@fefb66c
+com.pholser.junit.quickcheck.generator.java.time.ZoneOffsetGenerator@48860139
+com.pholser.junit.quickcheck.generator.java.time.ZonedDateTimeGenerator@7e0883f3
+com.pholser.junit.quickcheck.generator.java.util.DateGenerator@33568e26
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version3@194e78af
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version4@4fe4503a
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version5@669580e2
+java.util.Set<? super java.lang.Float>
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@217fd3c
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@217fd3c
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@217fd3c
+In compose weigghetd fn
+class java.lang.Float
+class java.lang.Float
+generatorFor
+java.lang.Float
+class java.lang.Float
+In compose
+maybeaddgeneratorsFor
+class java.lang.Float
+generatorsFor
+class java.lang.Float
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+java.lang.Float
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@69ac5752
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@69ac5752
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@69ac5752
+In compose weigghetd fn
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@69ac5752
+maybeaddgeneratorsFor
+class java.lang.Float
+generatorsFor
+class java.lang.Float
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+java.lang.Float
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@1736273c
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@1736273c
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@1736273c
+In compose weigghetd fn
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@217fd3c
+maybeaddgeneratorsFor
+interface java.lang.Comparable
+generatorsFor
+interface java.lang.Comparable
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@322ab6ce
+com.pholser.junit.quickcheck.generator.java.lang.ByteGenerator@5b74902c
+com.pholser.junit.quickcheck.generator.java.lang.CharacterGenerator@4e4bfd9c
+com.pholser.junit.quickcheck.generator.java.lang.DoubleGenerator@43ee1cf7
+com.pholser.junit.quickcheck.generator.java.lang.Encoded@24954e82
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+com.pholser.junit.quickcheck.generator.java.lang.IntegerGenerator@4a29fe2e
+com.pholser.junit.quickcheck.generator.java.lang.LongGenerator@79135a38
+com.pholser.junit.quickcheck.generator.java.lang.ShortGenerator@77fceac6
+com.pholser.junit.quickcheck.generator.java.lang.StringGenerator@563c3aca
+com.pholser.junit.quickcheck.generator.java.math.BigDecimalGenerator@53e166ad
+com.pholser.junit.quickcheck.generator.java.math.BigIntegerGenerator@30c03473
+com.pholser.junit.quickcheck.generator.java.nio.charset.CharsetGenerator@20fa5277
+com.pholser.junit.quickcheck.generator.java.time.DurationGenerator@7ef9c8a5
+com.pholser.junit.quickcheck.generator.java.time.InstantGenerator@c6244e7
+com.pholser.junit.quickcheck.generator.java.time.LocalDateGenerator@25dad235
+com.pholser.junit.quickcheck.generator.java.time.LocalDateTimeGenerator@3292eff7
+com.pholser.junit.quickcheck.generator.java.time.LocalTimeGenerator@29ea5e0
+com.pholser.junit.quickcheck.generator.java.time.MonthDayGenerator@1c459c28
+com.pholser.junit.quickcheck.generator.java.time.OffsetDateTimeGenerator@6ffdbeef
+com.pholser.junit.quickcheck.generator.java.time.OffsetTimeGenerator@4a3509b0
+com.pholser.junit.quickcheck.generator.java.time.YearGenerator@d677be9
+com.pholser.junit.quickcheck.generator.java.time.YearMonthGenerator@fefb66c
+com.pholser.junit.quickcheck.generator.java.time.ZoneOffsetGenerator@48860139
+com.pholser.junit.quickcheck.generator.java.time.ZonedDateTimeGenerator@7e0883f3
+com.pholser.junit.quickcheck.generator.java.util.DateGenerator@33568e26
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version3@194e78af
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version4@4fe4503a
+com.pholser.junit.quickcheck.generator.java.util.RFC4122$Version5@669580e2
+java.util.Set<? super java.lang.Float>
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+In compose weigghetd fn
+class java.lang.Float
+class java.lang.Float
+generatorFor
+java.lang.Float
+class java.lang.Float
+In compose
+maybeaddgeneratorsFor
+class java.lang.Float
+generatorsFor
+class java.lang.Float
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+java.lang.Float
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@36eb8e07
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@36eb8e07
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@36eb8e07
+In compose weigghetd fn
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@36eb8e07
+maybeaddgeneratorsFor
+class java.lang.Float
+generatorsFor
+class java.lang.Float
+Matches generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@5b1f5fcc
+java.lang.Float
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@3df6494f
+Else In hasGeneratorsFor generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@3df6494f
+In match generators
+com.pholser.junit.quickcheck.generator.java.lang.FloatGenerator@3df6494f
+In compose weigghetd fn
+In produce generator
+com.pholser.junit.quickcheck.generator.java.util.HashSetGenerator@5a58db42
+Trials
+In generate
+In size:
+1
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+In generator type
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+Evalue
+after Evalue
+after generate
+Trials
+In generate
+In size:
+2
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+In generator type
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+Evalue
+after Evalue
+after generate
+Trials
+In generate
+In size:
+3
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+In generator type
+com.pholser.junit.quickcheck.generator.java.lang.BooleanGenerator@ba86c53
+Evalue
+after Evalue
+after generate
+[MockitoHint] SetOfSuperFloatPropertyParameterTest.verifyInteractionWithRandomness (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused... -> at com.pholser.junit.quickcheck.Generating.ints(Generating.java:118)
+[MockitoHint]  ...args ok? -> at com.pholser.junit.quickcheck.internal.Items.choose(Items.java:58)
+[MockitoHint]  ...args ok? -> at com.pholser.junit.quickcheck.internal.Items.choose(Items.java:58)
+[MockitoHint]  ...args ok? -> at com.pholser.junit.quickcheck.internal.Items.choose(Items.java:58)
+[MockitoHint]  ...args ok? -> at com.pholser.junit.quickcheck.internal.Items.choose(Items.java:58)
+
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -240,18 +240,35 @@ public class GeneratorRepository implements Generators {
         generator.configure(parameter.annotatedType());
         if (parameter.topLevel())
             generator.configure(parameter.annotatedElement());
-
+        System.out.println("In produce generator");
+        System.out.println(generator.toString());
         return generator;
     }
 
     public Generator<?> generatorFor(ParameterTypeContext parameter) {
-        if (!parameter.explicitGenerators().isEmpty())
-            return composeWeighted(parameter, parameter.explicitGenerators());
-        if (parameter.isArray())
+         System.out.println("generatorFor");
+        System.out.println(parameter.declarerName);
+         System.out.println(parameter.getRawClass());
+        if (!parameter.explicitGenerators().isEmpty()){
+            System.out.println("In compose weighted:");
+            System.out.println(composeWeighted(parameter, parameter.explicitGenerators()).toString());
+             return composeWeighted(parameter, parameter.explicitGenerators());
+        }
+           
+        if (parameter.isArray()){
+            System.out.println("In generatorForArrayType");
+            System.out.println(generatorForArrayType(parameter).toString());
             return generatorForArrayType(parameter);
-        if (parameter.isEnum())
+        }
+            
+        if (parameter.isEnum()){
+            System.out.println("In EnumGenerator");
+            System.out.println(new EnumGenerator(parameter.getRawClass()).toString());
             return new EnumGenerator(parameter.getRawClass());
-
+        }
+            
+        System.out.println("In compose");
+        System.out.println(compose(parameter, matchingGenerators(parameter)));
         return compose(parameter, matchingGenerators(parameter));
     }
 
@@ -273,13 +290,29 @@ public class GeneratorRepository implements Generators {
             maybeAddGeneratorByNamingConvention(parameter, matches);
             maybeAddLambdaGenerator(parameter, matches);
             maybeAddMarkerInterfaceGenerator(parameter, matches);
+            System.out.println("In hasGeneratorsFor generators");
+            for (Generator<?> generator : matches) {
+            
+            System.out.println(generator.toString());
+        }
         } else {
+          
             maybeAddGeneratorsFor(parameter, matches);
+              System.out.println("Else In hasGeneratorsFor generators");
+            for (Generator<?> generator : matches) {
+            
+            System.out.println(generator.toString());
+        }
         }
         if (matches.isEmpty()) {
             throw new IllegalArgumentException(
                 "Cannot find generator for " + parameter.name()
                 + " of type " + parameter.type().getTypeName());
+        }
+
+        for (Generator<?> generator : matches) {
+            System.out.println("In match generators");
+            System.out.println(generator.toString());
         }
 
         return matches;
@@ -342,10 +375,15 @@ public class GeneratorRepository implements Generators {
     private void maybeAddGeneratorsFor(
         ParameterTypeContext parameter,
         List<Generator<?>> matches) {
-
+         System.out.println("maybeaddgeneratorsFor");
+        System.out.println(parameter.getRawClass());
         List<Generator<?>> candidates = generatorsFor(parameter);
         List<TypeParameter<?>> typeParameters = parameter.getTypeParameters();
-
+        for (Generator<?> generator : candidates) {
+            // System.out.println("maybeAddGeneratorsFor");
+            System.out.println(parameter.declarerName);
+            System.out.println(generator.toString());
+        }
         if (typeParameters.isEmpty()) {
             matches.addAll(candidates);
         } else {
@@ -371,10 +409,17 @@ public class GeneratorRepository implements Generators {
     private Generator<?> composeWeighted(
         ParameterTypeContext parameter,
         List<Weighted<Generator<?>>> matches) {
-
+            System.out.println("In compose weigghetd fn");
         List<Generator<?>> forComponents = new ArrayList<>();
-        for (ParameterTypeContext c : parameter.typeParameterContexts(random))
+        List<ParameterTypeContext>contexts = parameter.typeParameterContexts(random);
+        for(ParameterTypeContext c :contexts){
+            System.out.println(c.getRawClass());
+        }
+        for (ParameterTypeContext c :contexts){
+            System.out.println(c.getRawClass());
             forComponents.add(generatorFor(c));
+        }
+            
 
         for (Weighted<Generator<?>> each : matches)
             applyComponentGenerators(each.item, forComponents);
@@ -408,8 +453,13 @@ public class GeneratorRepository implements Generators {
     }
 
     private List<Generator<?>> generatorsFor(ParameterTypeContext parameter) {
+        System.out.println("generatorsFor");
+        System.out.println(parameter.getRawClass());
         Set<Generator<?>> matches = generators.get(parameter.getRawClass());
-
+        System.out.println("Matches generators");
+        for (Generator<?> generator : matches) {
+            System.out.println(generator.toString());
+        }
         if (!parameter.allowMixedTypes()) {
             Generator<?> match = choose(matches, random);
             matches = new HashSet<>();

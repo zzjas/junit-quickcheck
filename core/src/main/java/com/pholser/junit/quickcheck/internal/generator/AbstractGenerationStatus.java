@@ -55,6 +55,8 @@ abstract class AbstractGenerationStatus implements GenerationStatus {
     }
 
     @Override public int size() {
+        System.out.println("In size:");
+        System.out.println(attempts() + 1);
         return distro.sampleWithMean(attempts() + 1, random);
     }
 

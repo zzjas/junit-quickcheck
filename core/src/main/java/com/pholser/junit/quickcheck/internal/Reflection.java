@@ -49,6 +49,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+// import java.util.TreeSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -135,9 +137,12 @@ public final class Reflection {
     }
 
     public static Set<Type<?>> supertypes(Type<?> bottom) {
-        Set<Type<?>> supertypes = new HashSet<>();
+        Set<Type<?>> supertypes = new LinkedHashSet<>();
         supertypes.add(bottom);
         supertypes.addAll(bottom.getAllTypesAssignableFromThis());
+        for (org.javaruntype.type.Type<?> supertype : supertypes) {
+            System.out.println(supertype.getRawClass());
+        }
         return supertypes;
     }
 

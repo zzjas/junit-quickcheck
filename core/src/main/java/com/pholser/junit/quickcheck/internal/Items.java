@@ -38,6 +38,8 @@ public final class Items {
     @SuppressWarnings("unchecked")
     public static <T> T choose(Collection<T> items, SourceOfRandomness random) {
         int size = items.size();
+        System.out.println("In choose");
+            System.out.println(size);
         if (size == 0) {
             throw new IllegalArgumentException(
                 "Collection is empty, can't pick an element from it");
@@ -45,6 +47,10 @@ public final class Items {
 
         if (items instanceof RandomAccess && items instanceof List<?>) {
             List<T> list = (List<T>) items;
+            
+            System.out.println(size == 1
+                ? list.get(0)
+                : list.get(random.nextInt(size)));
             return size == 1
                 ? list.get(0)
                 : list.get(random.nextInt(size));
@@ -53,8 +59,14 @@ public final class Items {
         if (size == 1) {
             return items.iterator().next();
         }
-
+        System.out.println("end choose");
+        // List<T> list = (List<T>) items;
         Object[] array = items.toArray(new Object[0]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i].toString());
+            
+        }
+        System.out.println(random.nextInt(array.length));
         return (T) array[random.nextInt(array.length)];
     }
 
