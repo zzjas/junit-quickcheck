@@ -108,6 +108,12 @@ public abstract class CollectionGenerator<T extends Collection>
         int size = size(random, status);
 
         Generator<?> generator = componentGenerators().get(0);
+        
+        for (Generator<?> generatorIter : componentGenerators()) {
+           System.out.println(generatorIter.toString());
+        }
+        System.out.println("In generator type");
+        System.out.println(componentGenerators().get(0).toString());
         Stream<?> itemStream =
             Stream.generate(() -> generator.generate(random, status))
                 .sequential();

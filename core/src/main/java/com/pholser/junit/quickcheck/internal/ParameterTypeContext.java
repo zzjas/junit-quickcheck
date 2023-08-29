@@ -54,6 +54,7 @@ import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import org.javaruntype.type.ExtendsTypeParameter;
@@ -73,7 +74,7 @@ public class ParameterTypeContext {
 
     private final String parameterName;
     private final AnnotatedType parameterType;
-    private final String declarerName;
+    public final String declarerName;
     private final org.javaruntype.type.Type<?> resolved;
     private final List<Weighted<Generator<?>>> explicits = new ArrayList<>();
     private final GenericsContext generics;
@@ -94,7 +95,12 @@ public class ParameterTypeContext {
     public static ParameterTypeContext forField(Field field) {
         GenericsContext generics =
             GenericsResolver.resolve(field.getDeclaringClass());
-
+            System.out.println("In forfirld");
+        System.out.println(field.getName());
+        System.out.println(field.getAnnotatedType());
+        System.out.println(field.getDeclaringClass().getName());
+        System.out.println(generics.resolveFieldType(field));
+        System.out.println(Types.forJavaLangReflectType(generics.resolveFieldType(field)));
         return new ParameterTypeContext(
             field.getName(),
             field.getAnnotatedType(),
@@ -389,29 +395,42 @@ public class ParameterTypeContext {
         return resolved.getTypeParameters();
     }
 
-    public List<ParameterTypeContext> typeParameterContexts(
+    public List<ParameterTypeContext> 
+    typeParameterContexts(
         SourceOfRandomness random) {
-
+System.out.println("typeParameterContexts");
         List<ParameterTypeContext> typeParamContexts = new ArrayList<>();
         List<TypeParameter<?>> typeParameters = getTypeParameters();
         List<AnnotatedType> annotatedTypeParameters =
             annotatedComponentTypes(annotatedType());
 
         for (int i = 0; i < typeParameters.size(); ++i) {
+            System.out.println(typeParameters.size());
             TypeParameter<?> p = typeParameters.get(i);
+            System.out.println(p.getType());
             AnnotatedType a =
                 annotatedTypeParameters.size() > i
                     ? annotatedTypeParameters.get(i)
                     : zilch();
 
-            if (p instanceof StandardTypeParameter<?>)
-                addStandardTypeParameterContext(typeParamContexts, p, a);
-            else if (p instanceof WildcardTypeParameter)
+            if (p instanceof StandardTypeParameter<?>){
+                System.out.println("In standart type parameter");
+                 addStandardTypeParameterContext(typeParamContexts, p, a);
+            }
+               
+            else if (p instanceof WildcardTypeParameter){
+                System.out.println("In wild type parameter");
                 addWildcardTypeParameterContext(typeParamContexts, a);
-            else if (p instanceof ExtendsTypeParameter<?>)
+            }
+                
+            else if (p instanceof ExtendsTypeParameter<?>){
+                System.out.println("In extends type parameter");
                 addExtendsTypeParameterContext(typeParamContexts, p, a);
+            }
+                
             else {
                 // must be "? super X"
+                System.out.println("In supertype type parameter");
                 addSuperTypeParameterContext(random, typeParamContexts, p, a);
             }
         }
@@ -472,9 +491,16 @@ public class ParameterTypeContext {
         TypeParameter<?> p,
         AnnotatedType a) {
 
-        Set<org.javaruntype.type.Type<?>> supertypes = supertypes(p.getType());
-        org.javaruntype.type.Type<?> choice = choose(supertypes, random);
+      LinkedHashSet<org.javaruntype.type.Type<?>> supertypes = new LinkedHashSet<>(supertypes(p.getType()));
 
+
+for (org.javaruntype.type.Type<?> supertype : supertypes) {
+    System.out.println(supertype.getRawClass());
+}
+
+        org.javaruntype.type.Type<?> choice = choose(supertypes, random);
+        System.out.println("addSup func");
+       System.out.println(choice.getName());
         typeParameterContexts.add(
             new ParameterTypeContext(
                 p.getType().getName(),

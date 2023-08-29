@@ -92,6 +92,7 @@ public final class Generating {
     }
 
     public static float floats(SourceOfRandomness random) {
+        System.out.println("in floats");
         return random.nextFloat(minFloat(), maxFloat());
     }
 

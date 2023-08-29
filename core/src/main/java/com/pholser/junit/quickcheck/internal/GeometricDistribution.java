@@ -32,10 +32,12 @@ import com.pholser.junit.quickcheck.random.SourceOfRandomness;
 
 public class GeometricDistribution {
     public int sampleWithMean(double mean, SourceOfRandomness random) {
+        System.out.println("here2");
         return sample(probabilityOfMean(mean), random);
     }
 
     int sample(double p, SourceOfRandomness random) {
+        System.out.println("here3");
         ensureProbability(p);
 
         if (p == 1)
